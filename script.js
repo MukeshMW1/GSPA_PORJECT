@@ -4,8 +4,7 @@ var t2= gsap.timeline();
 t1.from("nav",
     {
         opacity: 0,
-        duration: .4,
-        y: -100,
+        duration: .9,
       
     }
 ).from("nav li",{
