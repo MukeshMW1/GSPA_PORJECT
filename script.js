@@ -1,6 +1,16 @@
 
 var t1= gsap.timeline();
 var t2= gsap.timeline();
+var t3= gsap.timeline({
+    
+    scrollTrigger: {
+        trigger: ".section-brands",
+        start: "top 50%",
+        end: "top",
+        scrub: 1,
+        markers: true,
+        }
+});
 t1.from("nav",
     {
         opacity: 0,
@@ -43,3 +53,26 @@ t2.from(".center h1",{
     duration: 1,
     scale:.3
 })
+
+
+t3.from(".section-brands img",{
+    opacity: 0,
+    scale:2,
+    duration: .8,
+    y:100,
+    stagger: .2
+})
+// .from(".section-brands h2",{
+//     opacity: 0,
+//     duration: .4,
+//     y:100,
+// }).from(".section-brands p",{
+//     opacity: 0,
+//     duration: .4,
+//     y:100,
+// }).from(".section-brands button",{
+//     opacity: 0,
+//     duration: .4,
+//     y:100,
+
+// })
