@@ -1,4 +1,4 @@
-
+var globe = document.querySelector(" #globe");
 var t1= gsap.timeline();
 var t2= gsap.timeline();
 var t3= gsap.timeline({
@@ -76,3 +76,19 @@ t3.from(".section-brands img",{
 //     y:100,
 
 // })
+
+
+globe.addEventListener("mouseenter", function(){
+   gsap.to(globe,{
+       rotate: 180,
+       duration: .7,
+       scale:.8
+   })
+})
+globe.addEventListener("mouseleave", function(){
+   gsap.to(globe,{
+       rotate: 0,
+       duration: .7,
+       scale:1
+   })
+})
