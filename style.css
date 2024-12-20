@@ -9,6 +9,7 @@ body {
   height: 100vh;
   background-color: rgba(255, 255, 255, 0.842);
   color: black;
+  overflow-x: hidden;
 }
 
 nav {
@@ -89,11 +90,14 @@ section{
     width: 100%;
     height: 80%;
     display: flex;
-    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    padding:0 40px;
 }
 
 .center-left{
-    width:45%;
+  width:45%;
+  max-height: 100%;
 
 }
 .center-right{
@@ -105,14 +109,13 @@ section{
 
 
 .center-left h1{
-    margin-bottom: 30px;
-    font-size: 60px;
+    
+    font-size: 50px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
    
 }
 
 .center-left p{
-    width: 90%;
     margin-bottom: 20px;
     font-size: 12px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
@@ -130,8 +133,29 @@ img
 
 .center-right img{
     position: absolute;
-    right: 0;
-height:100%;
+    top:0;
+    right:0;
+ height:30vw;
+ /* padding: 50px 0; */
 
 
+}
+
+
+.section-brands
+{
+width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 120px;
+    
+
+  
+   
+
+}
+
+.section-brands img{
+  height: 70px;
 }
