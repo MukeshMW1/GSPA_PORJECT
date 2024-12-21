@@ -9,7 +9,7 @@ function firstPageAnimation() {
             start: "top 60%",
             end: "top",
             scrub: 1,
-            markers: true,
+            // markers: true,
             }
     });
     t1.from("nav",
@@ -104,26 +104,59 @@ function firstPageAnimation() {
 
 firstPageAnimation();
 
+function sectionPageAnimation() {
 
-
-let tj = gsap.timeline({
+var tj = gsap.timeline({
     scrollTrigger: {
         trigger: ".services h3",
         start: "top 60%",
         end: "top",
         scrub: 1,
-        markers: true,
+        // markers: true,
+        }
+});
+var tj2 = gsap.timeline({
+    scrollTrigger: {
+        trigger: ".services h3",
+        start: "top 40%",
+        end: "top 10%",
+        scrub: 1,
+        // markers: true,
         }
 });
 tj.from(".services h3",{
     opacity:0,
     duration: .6,
-    scale:.2,
+    // scale:.2,
     x:-100,
    
 },"anime").from(".services p",{
     x:100,
     opacity:0,
     duration: .3,
-    scale:.2,
+    // scale:.2,
 },"anime")
+
+tj2.from(".elm.line1.left",{
+    x:-100,
+    opacity:0,
+    duratiom: .3,
+
+},"manga").from(".elm.line1.right",{
+    x:100,
+    opacity:0,
+    duratiom: .3,
+},"manga").from(".elm.line2.left",{
+    x:-100,
+    opacity:0,
+    duratiom: .4,
+
+},"line2").from(".elm.line2.right",{
+    x:100,
+    opacity:0,
+    duratiom: .4,
+},"line2")
+
+}
+
+sectionPageAnimation();
